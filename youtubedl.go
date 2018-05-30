@@ -16,6 +16,7 @@ type MetaData struct {
 	Duration    int         `json:"duration"`
 	Description string      `json:"description"`
 	Formats     []Format    `json:"formats"`
+	Uploader    string      `json:"uploader"`
 }
 
 type Thumbnail struct {
