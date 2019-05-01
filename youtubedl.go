@@ -1,10 +1,10 @@
 package youtubedl
 
 import (
-	"os/exec"
-	"time"
 	"context"
 	"encoding/json"
+	"os/exec"
+	"time"
 )
 
 var timeout = time.Second * 5
@@ -13,7 +13,7 @@ type MetaData struct {
 	Title       string      `json:"title"`
 	Thumbnail   string      `json:"thumbnail"`
 	Thumbnails  []Thumbnail `json:"thumbnails"`
-	Duration    int         `json:"duration"`
+	Duration    float64     `json:"duration"`
 	Description string      `json:"description"`
 	Formats     []Format    `json:"formats"`
 	Uploader    string      `json:"uploader"`
@@ -25,12 +25,12 @@ type Thumbnail struct {
 }
 
 type Format struct {
-	Protocol string `json:"protocol"`
-	Ext      string `json:"ext"`
-	Format   string `json:"format"`
-	Url      string `json:"url"`
-	Abr      int    `json:"abr"`
-	Vcodec   string `json:"vcodec"`
+	Protocol string  `json:"protocol"`
+	Ext      string  `json:"ext"`
+	Format   string  `json:"format"`
+	Url      string  `json:"url"`
+	Abr      float64 `json:"abr"`
+	Vcodec   string  `json:"vcodec"`
 }
 
 func GetMetaData(url string) (*MetaData, error) {

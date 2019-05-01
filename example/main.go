@@ -1,10 +1,10 @@
 package main
 
 import (
-	"github.com/svenwiltink/youtube-dl"
-	"vitess.io/vitess/go/vt/log"
-	"fmt"
 	"flag"
+	"fmt"
+	"github.com/svenwiltink/youtube-dl"
+	"log"
 )
 
 func main() {
