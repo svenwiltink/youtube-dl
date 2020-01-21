@@ -20,7 +20,7 @@ type MetaData struct {
 }
 
 type Thumbnail struct {
-	Id  int    `json:"id,string"`
+	Id  string `json:"id"`
 	Url string `json:"url"`
 }
 
